@@ -6,6 +6,20 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<properties>
 
 		<!-- Generic properties -->
@@ -31,6 +45,8 @@
 
 		<!-- Test -->
 		<junit.version>4.11</junit.version>
+		<metrics.version>3.0.1</metrics.version>
+		<commons.lang.version>2.6</commons.lang.version>
 
 	</properties>
 
@@ -111,6 +127,29 @@
 			<version>3.2.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.codahale.metrics</groupId>
+			<artifactId>metrics-core</artifactId>
+			<version>${metrics.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.codahale.metrics</groupId>
+			<artifactId>metrics-healthchecks</artifactId>
+			<version>${metrics.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.codahale.metrics</groupId>
+			<artifactId>metrics-jvm</artifactId>
+			<version>${metrics.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons.lang.version}</version>
+		</dependency>
 
 	</dependencies>
 </project>
